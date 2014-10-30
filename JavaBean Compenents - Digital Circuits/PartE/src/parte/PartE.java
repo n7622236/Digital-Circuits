@@ -27,10 +27,189 @@ public class PartE extends javax.swing.JFrame {
     private void initComponents() {
 
         circuitBoard1 = new Digital.CircuitBoard();
+        aNDGate1 = new Digital.ANDGate();
+        lED1 = new Digital.LED();
+        nOTGate1 = new Digital.NOTGate();
+        oRGate1 = new Digital.ORGate();
+        pin1 = new Digital.Pin();
+        xORGate1 = new Digital.XORGate();
+        switch1 = new Digital.Switch();
+        switch2 = new Digital.Switch();
+        lED2 = new Digital.LED();
+        lED3 = new Digital.LED();
+        lED4 = new Digital.LED();
+        lED5 = new Digital.LED();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         circuitBoard1.setLayout(null);
+
+        aNDGate1.setInput0(switch1.getOutput());
+        aNDGate1.setInput1(switch2.getOutput());
+
+        javax.swing.GroupLayout aNDGate1Layout = new javax.swing.GroupLayout(aNDGate1);
+        aNDGate1.setLayout(aNDGate1Layout);
+        aNDGate1Layout.setHorizontalGroup(
+            aNDGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        aNDGate1Layout.setVerticalGroup(
+            aNDGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(aNDGate1);
+        aNDGate1.setBounds(170, 80, 48, 20);
+
+        lED1.setInput(aNDGate1.getOutput());
+
+        javax.swing.GroupLayout lED1Layout = new javax.swing.GroupLayout(lED1);
+        lED1.setLayout(lED1Layout);
+        lED1Layout.setHorizontalGroup(
+            lED1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        lED1Layout.setVerticalGroup(
+            lED1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(lED1);
+        lED1.setBounds(330, 60, 30, 35);
+
+        nOTGate1.setInput0(switch1.getOutput());
+
+        javax.swing.GroupLayout nOTGate1Layout = new javax.swing.GroupLayout(nOTGate1);
+        nOTGate1.setLayout(nOTGate1Layout);
+        nOTGate1Layout.setHorizontalGroup(
+            nOTGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        nOTGate1Layout.setVerticalGroup(
+            nOTGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(nOTGate1);
+        nOTGate1.setBounds(170, 220, 48, 20);
+
+        oRGate1.setInput0(switch1.getOutput());
+        oRGate1.setInput1(switch2.getOutput());
+
+        javax.swing.GroupLayout oRGate1Layout = new javax.swing.GroupLayout(oRGate1);
+        oRGate1.setLayout(oRGate1Layout);
+        oRGate1Layout.setHorizontalGroup(
+            oRGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        oRGate1Layout.setVerticalGroup(
+            oRGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(oRGate1);
+        oRGate1.setBounds(170, 130, 48, 20);
+
+        pin1.setInput0(switch1.getOutput());
+
+        javax.swing.GroupLayout pin1Layout = new javax.swing.GroupLayout(pin1);
+        pin1.setLayout(pin1Layout);
+        pin1Layout.setHorizontalGroup(
+            pin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+        pin1Layout.setVerticalGroup(
+            pin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(pin1);
+        pin1.setBounds(190, 260, 10, 20);
+
+        xORGate1.setInput0(switch1.getOutput());
+        xORGate1.setInput1(switch2.getOutput());
+
+        javax.swing.GroupLayout xORGate1Layout = new javax.swing.GroupLayout(xORGate1);
+        xORGate1.setLayout(xORGate1Layout);
+        xORGate1Layout.setHorizontalGroup(
+            xORGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        xORGate1Layout.setVerticalGroup(
+            xORGate1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(xORGate1);
+        xORGate1.setBounds(170, 170, 48, 20);
+        circuitBoard1.add(switch1);
+        switch1.setBounds(40, 130, 30, 35);
+        circuitBoard1.add(switch2);
+        switch2.setBounds(40, 200, 30, 35);
+
+        lED2.setInput(oRGate1.getOutput());
+
+        javax.swing.GroupLayout lED2Layout = new javax.swing.GroupLayout(lED2);
+        lED2.setLayout(lED2Layout);
+        lED2Layout.setHorizontalGroup(
+            lED2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        lED2Layout.setVerticalGroup(
+            lED2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(lED2);
+        lED2.setBounds(330, 110, 30, 35);
+
+        lED3.setInput(xORGate1.getOutput());
+
+        javax.swing.GroupLayout lED3Layout = new javax.swing.GroupLayout(lED3);
+        lED3.setLayout(lED3Layout);
+        lED3Layout.setHorizontalGroup(
+            lED3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        lED3Layout.setVerticalGroup(
+            lED3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(lED3);
+        lED3.setBounds(330, 160, 30, 35);
+
+        lED4.setInput(nOTGate1.getOutput());
+
+        javax.swing.GroupLayout lED4Layout = new javax.swing.GroupLayout(lED4);
+        lED4.setLayout(lED4Layout);
+        lED4Layout.setHorizontalGroup(
+            lED4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        lED4Layout.setVerticalGroup(
+            lED4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(lED4);
+        lED4.setBounds(330, 210, 30, 35);
+
+        lED5.setInput(pin1.getOutput());
+
+        javax.swing.GroupLayout lED5Layout = new javax.swing.GroupLayout(lED5);
+        lED5.setLayout(lED5Layout);
+        lED5Layout.setHorizontalGroup(
+            lED5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        lED5Layout.setVerticalGroup(
+            lED5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+        );
+
+        circuitBoard1.add(lED5);
+        lED5.setBounds(330, 260, 30, 35);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,6 +260,18 @@ public class PartE extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private Digital.ANDGate aNDGate1;
     private Digital.CircuitBoard circuitBoard1;
+    private Digital.LED lED1;
+    private Digital.LED lED2;
+    private Digital.LED lED3;
+    private Digital.LED lED4;
+    private Digital.LED lED5;
+    private Digital.NOTGate nOTGate1;
+    private Digital.ORGate oRGate1;
+    private Digital.Pin pin1;
+    private Digital.Switch switch1;
+    private Digital.Switch switch2;
+    private Digital.XORGate xORGate1;
     // End of variables declaration//GEN-END:variables
 }
